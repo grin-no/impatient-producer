@@ -10,7 +10,7 @@ A message has two fields
   
 It takes 1-5 seconds to process the message. The processing time depends on the device-id ( processing time = device-id mod 5 ).
 
-The producer sends commands for 10 different devices every time. The producer is impatient, and doesn't wait for a reply before sending new messages.
+The producer sends commands for 10 different devices every time. The producer is impatient, and doesn't wait for a reply before sending new messages. It sends duplicate messages multiple times until a reply has been received for that message.
 
 Consider the cpu is multi-core, and the os is standard linux. Multiple consumers can also be implemented.
 
